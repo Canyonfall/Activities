@@ -23,15 +23,23 @@ The error showed that the line was missing a semicolon at the end.
 2. public void SetLightDimness(float currentSanityLevel)
 3. public bool DidPlayerHitBeat(float timeHit)
 
-
 #### Activity 2
 Metaphor: Classes like cookie cutters and Components like the actual cookies made from those cutters.
 
 A class is the cookie cutter, a template that determines what kind of cookie you can make, and components are the actual cookies made using the cutter. You can create multiple components from the same class, like you can make multiple cookies with one cutter. Member variables are the traits of each cookie, such as flavor, color, or size. Each cookie can have different traits. Then, methods are the actions the cookie can perform, like being able to crumble or change color.
 
-
 #### Activity 3
 Because the speed multiplier is greater than 1, so the speed of the ball is increasing, and the ball color will multiply color multiplier if the speed is greater than _speedThreshold. In this way the color of ball will get extremely bright till totally white. 
+
+
+### W4
+Table #7
+
+#### What solution did you come up with for the collider activity, and why? Specifically- which objects did you add Rigidbodies to, and which object(s) did you check Is Trigger on?
+I add Rigidbody component to the cat and the ball, in this way the cat can kick the ball, and the cat and ball can bounce off the wall. I add Is Trigger component to the goal. Because in this way the ball will detect when it is in the goal area, and still pass through the goal.
+
+#### IF your game did not work perfectly the first time you tested it, talk about what you had to fix.
+At the beginning of testing, when my cat touched the edge of the platform, it suddenly became rotating very very fast, tilting... Then I found that I did not check the Freeze Rotation X & Z for the kitty. During the coding process, I had some console error, but most of them are grammar error, like forgetting "f" after a float, missing bracket in a method... I fixed them all and finally worked ^_^
 
 
 ## Open-Source Assets
