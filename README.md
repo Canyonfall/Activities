@@ -7,14 +7,11 @@ Answer: The camera(pov) will not move, but the cat will move around when player 
 
 
 ### W2
-#### Why are the r, g, and b variables floats instead of ints, bools, or strings?
-The r, g, and b variables are floats because RGB color values in Unity can have decimal values between 0.0 and 1.0.
+1. The r, g, and b variables are floats because RGB color values in Unity can have decimal values between 0.0 and 1.0.
 
-#### Why is the _bounces variable an int instead of a float, bool, or string?
-The _bounces variable is an int because it keeps track of how many times the ball has bounced. A bounce count is a whole number.
+2. The _bounces variable is an int because it keeps track of how many times the ball has bounced. A bounce count is a whole number.
 
-#### The error you got after Step 4 of Part 2 told you something useful about why that line of code was broken—what was it?
-The error showed that the line was missing a semicolon at the end. 
+3. The error showed that the line was missing a semicolon at the end. 
 
 
 ### W3
@@ -35,11 +32,13 @@ Because the speed multiplier is greater than 1, so the speed of the ball is incr
 ### W4
 Table #7
 
-#### What solution did you come up with for the collider activity, and why? Specifically- which objects did you add Rigidbodies to, and which object(s) did you check Is Trigger on?
-I add Rigidbody component to the cat and the ball, in this way the cat can kick the ball, and the cat and ball can bounce off the wall. I add Is Trigger component to the goal. Because in this way the ball will detect when it is in the goal area, and still pass through the goal.
+1. I add Rigidbody component to the cat and the ball, in this way the cat can kick the ball, and the cat and ball can bounce off the wall. I add Is Trigger component to the goal. Because in this way the ball will detect when it is in the goal area, and still pass through the goal.
 
-#### IF your game did not work perfectly the first time you tested it, talk about what you had to fix.
-At the beginning of testing, when my cat touched the edge of the platform, it suddenly became rotating very very fast, tilting... Then I found that I did not check the Freeze Rotation X & Z for the kitty. During the coding process, I had some console error, but most of them are grammar error, like forgetting "f" after a float, missing bracket in a method... I fixed them all and finally worked ^_^
+2. At the beginning of testing, when my cat touched the edge of the platform, it suddenly became rotating very very fast, tilting... Then I found that I did not check the Freeze Rotation X & Z for the kitty. During the coding process, I had some console error, but most of them are grammar error, like forgetting "f" after a float, missing bracket in a method... I fixed them all and finally worked ^_^
+
+
+### W6
+The DeerW5 class needs a private Transform variable to store target GameObject the deer walk towards, and it should be add  [SerializeField] so I can modify the target in the Inspector. Then this class needs a Start() method to initialize and GetComponent<NavMeshAgent>() to get the NavMeshAgent Component attached to the deer. The Start() method should get the NavMeshAgent Component from the deer GameObject and use it to set the destination to the target transform's position, and this should tell the deer where to go at the beginning of the game. 
 
 
 ## Open-Source Assets
