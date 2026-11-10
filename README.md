@@ -41,6 +41,15 @@ Table #7
 The DeerW5 class needs a private Transform variable to store target GameObject the deer walk towards, and it should be add  [SerializeField] so I can modify the target in the Inspector. Then this class needs a Start() method to initialize and GetComponent<NavMeshAgent>() to get the NavMeshAgent Component attached to the deer. The Start() method should get the NavMeshAgent Component from the deer GameObject and use it to set the destination to the target transform's position, and this should tell the deer where to go at the beginning of the game. 
 
 
+### W7
+#### Activity 1
+Assigned class-resource topic: III. General C# coding
+Shared Google Doc: https://docs.google.com/document/d/179zDHWaZxqnBjZy0PR_jNnTRrSRR3sZZ_zDTDfMMah8/edit?usp=sharing
+
+#### Activity 2
+Variables in BatW6: _speed, _target, _isChasing. Methods: Update(), StartChasing, StopChasing(). 
+StartChasing stores the target and enables chasing. StopChasing disables chasing. Update uses Vector3.MoveTowards and Time.deltaTime to move toward the target only while chasing is enabled. The manager checks each bat in an array with a for loop, starts/stops its chase, and handles message cooldowns with a matching float array.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
