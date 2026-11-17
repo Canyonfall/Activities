@@ -50,6 +50,10 @@ Shared Google Doc: https://docs.google.com/document/d/179zDHWaZxqnBjZy0PR_jNnTRr
 Variables in BatW6: _speed, _target, _isChasing. Methods: Update(), StartChasing, StopChasing(). 
 StartChasing stores the target and enables chasing. StopChasing disables chasing. Update uses Vector3.MoveTowards and Time.deltaTime to move toward the target only while chasing is enabled. The manager checks each bat in an array with a for loop, starts/stops its chase, and handles message cooldowns with a matching float array.
 
+
+### W8
+In step 2, Vector3.forward always point to the global positive Z direction, and transform.forward point to the direction that the Muskrat facing (local). As a result, after Muskrat turn around, only transform.forward can let it move forward.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
