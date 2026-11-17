@@ -21,6 +21,9 @@ public class BatW6 : MonoBehaviour
 
     public void Update()
     {
-        Vector3.MoveTowards(transform.position, _target.position, _chaseSpeed * Time.deltaTime);
+        if (_isChasing && _target != null)
+        {
+            Vector3.MoveTowards(transform.position, _target.position, _chaseSpeed * Time.deltaTime);
+        }
     }
 }
